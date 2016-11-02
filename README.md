@@ -32,6 +32,10 @@ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc
 sudo rpm -i /tmp/nvidia-docker*.rpm && rm /tmp/nvidia-docker*.rpm
 sudo systemctl start nvidia-docker
 
+# Enable auto start on Centos 7
+
+sudo systemctl enable nvidia-docker
+
 # Test nvidia-smi
 nvidia-docker run --rm nvidia/cuda nvidia-smi
 ```
